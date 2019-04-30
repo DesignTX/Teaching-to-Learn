@@ -13,11 +13,12 @@
     
    
   <% if user_signed_in? %>
-    <%= render 'layouts/navigation' %>
+  <%= render 'layouts/navigation' %>
     <%= yield %>
   <% else %>
     <%= yield %>
   <% end %>
     
+
   </body>
 </html>

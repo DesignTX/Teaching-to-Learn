@@ -1,4 +1,19 @@
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <% if user_signed_in? %>
+  <body class="container">
+    <br>
+    <br>
+    <div class="card">
+    <h5 class="card-header">Featured</h5>
+    <div class="card-body">
+      <h5 class="card-title">Special title treatment</h5>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    </div>
+  </body>
+
+  <% else %>
+      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
     <div class="col-md-5 p-lg-5 mx-auto my-5">
       <h1 class="display-4 font-weight-normal">Punny headline</h1>
       <hr>
@@ -12,3 +27,9 @@
     <div class="product-device shadow-sm d-none d-md-block"></div>
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
+  <% end %>
+
+
+
+
+
