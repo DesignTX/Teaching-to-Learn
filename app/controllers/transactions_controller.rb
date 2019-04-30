@@ -29,9 +29,5 @@ class TransactionsController < ApplicationController
       source: params[:stripeToken],
       description: 'Custom donation',
     })
-  
-    rescue Stripe::CardError => e
-      flash[:error] = e.message
-      redirect_to new_charge_path
   end
 end
