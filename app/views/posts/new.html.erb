@@ -1,23 +1,23 @@
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-      
-  <% if user_signed_in? %>
-  <%= form_for @post, url: posts_path ,html: {class: "edit-form"}, :action => "create" do |f| %>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+
+    <% if user_signed_in? %>
+    <%= form_for @post, url: posts_path(@post) ,html: {class: "edit-form"}, :action => "create" do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
 
     <%= f.label :content, 'Content' %>
     <%= f.text_field :content %>
+    <%= f.label :category %>
+    <%= select_tag "category", options_for_select(Category.all.collect{ |u| [u.name] }) %>
     <%= f.submit 'Create', class: 'btn btn-primary' %>
-  <% end %>
-<% else %>
-  <h1 class= "edit-form">Please sign in </h1>
-<% end %>
+    <% end %>
+    <% else %>
+    <h1 class="edit-form">Please sign in </h1>
+    <% end %>
 
 
-    </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
-
-
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>

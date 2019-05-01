@@ -10,10 +10,14 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new(post_params)
-      if @post.save
-          redirect_to @post
-      else
-          render 'new'
+    category = Category.find_by(name: params[:category])
+    @post.category = category
+    @post.user_id = current_user.id
+    if @post.save
+      redirect_to @post
+    else
+      raise
+        render 'new'
       end
   end
   
