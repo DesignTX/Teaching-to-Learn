@@ -1,24 +1,62 @@
-# README
+<p align="center">
+  <img width="1050" height="250" src=images/cube.png></p>
+  
+<h1 align="center"> 
+Teaching to Learn
+</h1>
+<br>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Project Outline
 
-Things you may want to cover:
+<br>
+[GitHub Repository](https://github.com/timwaldron/osrs-calc)
+<br>
 
-* Ruby version
+### Instructions for use
 
-* System dependencies
+### Who Its For
 
-* Configuration
+### How It Works
 
-* Database creation
+### Please note
 
-* Database initialization
+### Why we did what we did
 
-* How to run the test suite
+### Note to Future Developers
 
-* Services (job queues, cache servers, search engines, etc.)
+### How Everything Went
 
-* Deployment instructions
+### Workflow
 
-* ...
+# Screenshots 
+
+<h2 align="center"> 
+Initial Planning
+</h2>
+<p align="center">
+  <img width="250" height="250" src=docs/image.png>
+</p>
+
+<p align="center">
+  <img width="250" height="250" src=docs/image.png>
+</p>
+
+
+<h2 align="center"> 
+Slack Communications
+</h2>
+<p align="center">
+  <img width="250" height="250" src=docs/image.png>
+</p>
+
+
+<h2 align="center"> 
+Trello Use
+</h2>
+<p align="center">
+  <img width="250" height="250" src=docs/image.png>
+</p>
+
+<p align="center">
+  <img width="250" height="250" src=docs/image.png>
+</p>
