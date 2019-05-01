@@ -1,6 +1,14 @@
   <% if user_signed_in? %>
-  <body class="container">
+<body class="container">
 
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <%= link_to "ruby", posts_path(category: "ruby"), class: "btn btn-outline-success" %>
+      <%= link_to "java", posts_path(category: "java"), class: "btn btn-outline-success" %>
+      <%= link_to "HTML", posts_path(category: "html"), class: "btn btn-outline-success" %>
+      <%= link_to "CSS", posts_path(category: "css"), class: "btn btn-outline-success" %>
+    </form>
+  </nav>
 
     <% @posts.each do |post| %>
     <br>
@@ -8,7 +16,7 @@
     <div class="card">
     <h5 class="card-header"><%= post.title %></h5>
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
+      <h5 class="card-title"><%= post.category.name %></h5>
       <p class="card-text"><%= post.content %></p>
         <%= link_to 'Show', post, class: "btn btn-primary" %>
     </div>

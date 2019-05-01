@@ -2,12 +2,21 @@ class PostsController < ApplicationController
   load_and_authorize_resource
   def index
     @posts = Post.all
+    if params[:category]
+      category = params[:category]
+      @posts = @posts.select do |post|
+        category == Category.find(post.category_id).name
+      end 
+    end
   end
   
   def new
     @post = Post.new
   end
   
+  def filter
+  end
+
   def create
     @post = Post.new(post_params)
     category = Category.find_by(name: params[:category])
