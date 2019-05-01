@@ -15,6 +15,13 @@
     <hr class="my-4">
     <p><%=@post.content%></p>
     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+
+    <% if can? :update, @post %>
+    <h1>djsfadhfaskjdfhaskfha</h1>
+    <%= link_to "edit", edit_post_path(@post.id) %> |
+    <%= link_to "delete", post_path(@post.id), method: :delete %>
+    <% end %>
+
   </div>
 </div>
 

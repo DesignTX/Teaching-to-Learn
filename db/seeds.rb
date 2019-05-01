@@ -19,6 +19,7 @@
   firstname: 'Tony',
   lastname: 'Zoo',
   location: 'Melbourne',
+  admin: true,
   aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
  })
  tony.save
@@ -32,6 +33,7 @@ puts "just made a tony"
   firstname: 'sdsd',
   lastname: 'Zdsdsoo',
   location: 'Sydney',
+  admin: true,
   aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
  })
  brad.save
