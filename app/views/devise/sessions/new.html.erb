@@ -5,7 +5,6 @@
       
 
 <h2>Log in</h2>
-
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -25,20 +24,16 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: "btn btn-outline-secondary" %>
   </div>
 <% end %>
-
+<hr>
 <%= render "devise/shared/links" %>
 
-
-      <%= link_to 'Log In', new_user_session_path, class: "btn btn-outline-secondary"%>
-    
-      <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-outline-secondary"  %>
-
-    </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block">
+    </div>
+</div>
 
 
