@@ -6,6 +6,7 @@ gem 'devise'
 gem 'cancancan'
 gem 'faker'
 gem 'font-awesome-rails'
+gem 'ratyrate'
 
 # Bootstrap dependecies
 gem 'bootstrap', git: "https://github.com/twbs/bootstrap-rubygem"
