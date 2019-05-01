@@ -10,3 +10,29 @@
  
  java = Category.create({name:"java"})
  java.save 
+
+ tony = User.create({
+  email: 'tony@hotsexyman.com',
+  password: 'tony12345',
+  password_confirmation: 'tony12345',
+  username: 'catdog69',
+  firstname: 'Tony',
+  lastname: 'Zoo',
+  location: 'Melbourne',
+  aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
+ })
+ tony.save
+puts "just made a tony"
+
+ brad = User.create({
+  email: 'brad@hotsexyman.com',
+  password: 'brad12345',
+  password_confirmation: 'brad12345',
+  username: 'brad',
+  firstname: 'sdsd',
+  lastname: 'Zdsdsoo',
+  location: 'Sydney',
+  aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
+ })
+ brad.save
+puts "just made a brad"
