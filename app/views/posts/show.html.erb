@@ -14,8 +14,10 @@
     <p class="lead"><%=@post.user.email%></p>3
     <hr class="my-4">
     <p><%=@post.content%></p>
-    <p><%= image_tag @post.image.service_url, class: 'image-size' %>
-</p>
+    <p>
+    <%= image_tag(@post.image.service_url) if @post.image.attached? %>
+  
+    </p>
     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 
     <% if can? :update, @post %>
