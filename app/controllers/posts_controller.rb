@@ -55,7 +55,14 @@ class PostsController < ApplicationController
     @post.destroy
 
     redirect_to root_path
-    end
+  end
+
+  def send_email
+    @user = current_user
+    UserMailer.with(user: @user).interested_in_post_email.deliver_now
+    redirect_to root_path
+    # redirect to a prompt that tells the user they have been successful sending an email and the poster will be in contact with them soon
+  end
 
   private
 
