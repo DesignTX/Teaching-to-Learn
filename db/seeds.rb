@@ -43,7 +43,8 @@ tony.save
 puts 'just made a tony'
 puts 'email: tony@gmail.com'
 puts 'password: password'
-
+puts ''
+puts '--------------------------'
 
 brad = User.create(
   email: 'tony@gmail.com',
@@ -60,7 +61,8 @@ brad.save
 puts 'just made a brad'
 puts 'email: brad@gmail.com'
 puts 'password: password'
-
+puts ''
+puts '--------------------------'
 
 admin = User.create(
   email: 'admin@gmail.com',
@@ -77,6 +79,21 @@ admin.save
 puts 'just made a admin'
 puts 'email: admin@gmail.com'
 puts 'password: password'
+puts ''
+puts '--------------------------'
 
 
-post = 
+
+t.bigint "user_id"
+t.bigint "category_id"
+t.datetime "created_at", null: false
+t.datetime "updated_at", null: false
+t.string "title"
+t.string "content"
+
+post = Post.create(
+  user_id: '1'
+  category_id: '1'
+  title: "Docker 101: Fundamentals and Practice"
+  content: 
+)
