@@ -82,6 +82,42 @@ puts 'password: password'
 puts ''
 puts '--------------------------'
 
+welcome = User.create(
+  email: 'Welcome2teaching2learn@gmail.com',
+  password: 'password',
+  password_confirmation: 'password',
+  username: 'Admin',
+  firstname: 'Admin',
+  lastname: 'Neckbeard',
+  location: 'Melbourne',
+  admin: true,
+  aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
+)
+welcome.save
+puts 'just made a admin with real email address'
+puts 'email: Welcome2teaching2learn@gmail.com'
+puts 'password: password'
+puts ''
+puts '--------------------------'
+
+verified = User.create(
+  email: 'theadeptfridge@gmail.com',
+  password: 'password',
+  password_confirmation: 'password',
+  username: 'Admin',
+  firstname: 'Admin',
+  lastname: 'Neckbeard',
+  location: 'Melbourne',
+  admin: true,
+  aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
+)
+verified.save
+puts 'just made a verified user'
+puts 'email: theadeptfridge@gmail.com'
+puts 'password: password'
+puts ''
+puts '--------------------------'
+
 
 
 post_1 = Post.create(

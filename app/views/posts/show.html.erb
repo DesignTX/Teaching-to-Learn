@@ -29,13 +29,15 @@
 
 <div>
 <hr>
-<%= form_tag '/path' do%>
-Email :<%= text_field_tag 'email', ''%>
-<br>
-<br>
-Body:<%= text_area_tag 'body', ''%>
-<br>
-<%= submit_tag "submit",:value => "submit"%>
+<p>If you are interest in getting into contact with the person conduction this lesson send them an email</p>
+
+
+<%= link_to "email", email_path, class: "btn btn-success"  %>
+
+
+
+<%= form_tag 'email' do%>
+<%= submit_tag "submit", :value => "submit", class: "btn btn-success"%>
 <%end%>
 
 </div>
