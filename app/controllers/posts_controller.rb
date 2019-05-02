@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   load_and_authorize_resource
   def index
@@ -6,16 +8,15 @@ class PostsController < ApplicationController
       category = params[:category]
       @posts = @posts.select do |post|
         category == Category.find(post.category_id).name
-      end 
+      end
     end
   end
-  
+
   def new
     @post = Post.new
   end
-  
-  def filter
-  end
+
+  def filter; end
 
   def create
     @post = Post.new(post_params)
@@ -26,40 +27,38 @@ class PostsController < ApplicationController
       redirect_to @post
     else
       raise
-        render 'new'
+      render 'new'
       end
   end
-  
+
   def show
     @post = Post.find(params[:id])
   end
-  
+
   def update
     @post = Post.find(params[:id])
-  
+
     if @post.update(post_params)
       redirect_to @post
     else
       render 'edit'
     end
   end
-  
+
   def edit
     @post = Post.find(params[:id])
   end
-  
+
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-  
+
     redirect_to root_path
-  
     end
-  
+
   private
-  
+
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :image)
   end
-  
 end

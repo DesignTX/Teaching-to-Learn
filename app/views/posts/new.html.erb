@@ -10,6 +10,7 @@
     <%= f.text_field :content %>
     <%= f.label :category %>
     <%= select_tag "category", options_for_select(Category.all.collect{ |u| [u.name] }) %>
+    <%= f.file_field :image %>
     <%= f.submit 'Create', class: 'btn btn-primary' %>
     <% end %>
     <% else %>
