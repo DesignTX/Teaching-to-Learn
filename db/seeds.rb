@@ -57,10 +57,6 @@ tony.save
 puts 'just made a admin'
 puts ''
 
-
-
-
-
 brad = User.create(
   email: 'brad@hotsexyman.com',
   password: 'brad12345',
