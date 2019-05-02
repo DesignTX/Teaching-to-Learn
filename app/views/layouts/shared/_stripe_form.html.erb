@@ -1,18 +1,43 @@
 <%= form_tag transactions_path do %>
+
+
   <div id="error_explanation">
     <% if flash[:error].present? %>
       <p><%= flash[:error] %></p>
     <% end %>
   </div>
-  <article>
-    <%= label_tag(:amount, 'Donation Amount:') %>
-    <%= text_field_tag(:amount) %>
-  </article>
-  <article>
-    <%= hidden_field_tag(:stripeToken) %>
-  </article>
-  <button id='donateButton'>Donate</button>
+
+
+  <div class="card text-center">
+    <div class="card-header">
+      <h2>Donate</h2>
+    </div>
+    <div class="card-body"
+    >
+      <article>
+          <h5 class="card-title"><%= label_tag(:amount, 'Amount') %></h5>
+          <p class="card-text"><%= text_field_tag(:amount) %></p>
+          <br>
+      </article>
+      <article>
+        <%= hidden_field_tag(:stripeToken) %>
+      </article>
+
+
+   <button id='donateButton' class= "btn btn-primary">Donate</button>
+    </div>
+
+  </div>
+
 <% end %>
+
+
+
+
+  
+
+
+
 
 <script src="https://checkout.stripe.com/checkout.js"></script>
 

@@ -3,33 +3,44 @@
 <br>
 <div class="container">
   <div class="jumbotron">
-        <div class="card w-75">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Button</a>
-        </div>
-      </div>
     <h1 class="display-4"><%=@post.title%></h1>
-    <p class="lead"><%=@post.user.email%></p>3
+  <br>
+    <div class="card w-75">
+        <div class="card-body">
+          <h5 class="card-title"><%=@post.user.username%></h5>
+          <p class="card-text">Author: <%=@post.user.firstname%> | <%=@post.user.lastname%> </p>
+          <p class="card-text">email: <%=@post.user.email%> </p>
+        </div>
+    </div>
+
     <hr class="my-4">
     <p><%=@post.content%></p>
     <p>
     <%= image_tag(@post.image.service_url) if @post.image.attached? %>
-  
-    </p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+
 
     <% if can? :update, @post %>
-    <%= link_to "edit", edit_post_path(@post.id) %> |
+    <%= link_to "edit", edit_post_path(@post.id), class: "btn btn-primary" %> |
     <% end %>
-
 
     <% if can? :destroy, @post %>
-    <%= link_to "delete", post_path(@post.id), method: :delete %>
+    <%= link_to "delete", post_path(@post.id), method: :delete, class: "btn btn-danger"  %>
     <% end %>
 
+<div>
+<hr>
+<%= form_tag '/path' do%>
+Email :<%= text_field_tag 'email', ''%>
+<br>
+<br>
+Body:<%= text_area_tag 'body', ''%>
+<br>
+<%= submit_tag "submit",:value => "submit"%>
+<%end%>
+
+</div>
   </div>
+  <%= render 'layouts/shared/stripe_form' %>
 </div>
 
 
@@ -47,4 +58,3 @@
 
 
 
-<%= render 'layouts/shared/stripe_form' %>

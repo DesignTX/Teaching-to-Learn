@@ -29,6 +29,7 @@ class PostsController < ApplicationController
       raise
       render 'new'
       end
+      
   end
 
   def show
