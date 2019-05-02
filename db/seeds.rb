@@ -29,18 +29,37 @@ fortran = Category.create(name: 'Fortran')
 fortran.save
 
 tony = User.create(
-  email: 'tony@hotsexyman.com',
-  password: 'tony12345',
-  password_confirmation: 'tony12345',
+  email: 'tony@gmail.com',
+  password: 'password',
+  password_confirmation: 'password',
   username: 'catdog69',
   firstname: 'Tony',
-  lastname: 'Zoo',
+  lastname: 'Xu',
+  location: 'Melbourne',
+  admin: false,
+  aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
+)
+tony.save
+puts 'just made a tony'
+
+tony = User.create(
+  email: 'admin@gmail.com',
+  password: 'password',
+  password_confirmation: 'password',
+  username: 'Admin',
+  firstname: 'Admin',
+  lastname: 'Neckbeard',
   location: 'Melbourne',
   admin: true,
   aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
 )
 tony.save
-puts 'just made a tony'
+puts 'just made a admin'
+puts ''
+
+
+
+
 
 brad = User.create(
   email: 'brad@hotsexyman.com',
