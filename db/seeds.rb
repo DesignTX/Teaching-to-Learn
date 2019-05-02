@@ -155,8 +155,8 @@ post_4 = Post.create(
   user_id: "2",
   category_id: "4",
   title: "Learn CSS Grid",
-  summary: "The module has also gotten native support by the major browsers Safari, Chrome, Firefox, Edge this year, so I believe that all front-end developer will have to learn this technology in the not too distant future.
-
+  summary: "The module has also gotten native support by the major browsers Safari, Chrome, Firefox, Edge this year, so I believe that all front-end developer will have to learn this technology in the not too distant future.",
+  content: "
   In this article, I’ll take you through the very basics of CSS Grid as quickly as possible. I’ll be leaving out everything you shouldn’t care about until you’ve understood the basics.
   
   I’ve also created a free CSS Grid course. Click here to get full access to it.
@@ -167,28 +167,6 @@ post_4 = Post.create(
   
   13 interactive screencasts to take you from beginner to advanced.
   medium.freecodecamp.org	
-  Now let’s jump into it!
-  
-  Your first grid layout
-  The two core ingredients of a CSS Grid are the wrapper parent and the items children. The wrapper is the actual grid and the items are the content inside the grid.
-  
-  Here’s the markup for a wrapper with six items in it:
-  
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-  </div>
-  To turn our wrapper div into a grid, we simply give it a display of grid:
-  
-  .wrapper 
-      display: grid;
-  
-  But, this doesn’t do anything yet, as we haven’t defined how we want our grid to look like. It’ll simply stacks 6 div's on top of each other.
-  
-  
-  "
+  Now let’s jump into it!"
 )
-post_3.save
+post_4.save
