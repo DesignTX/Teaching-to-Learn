@@ -32,7 +32,7 @@ tony = User.create(
   email: 'tony@gmail.com',
   password: 'password',
   password_confirmation: 'password',
-  username: 'catdog69',
+  username: 'Furry_kid_69',
   firstname: 'Tony',
   lastname: 'Xu',
   location: 'Melbourne',
@@ -41,8 +41,28 @@ tony = User.create(
 )
 tony.save
 puts 'just made a tony'
+puts 'email: tony@gmail.com'
+puts 'password: password'
 
-tony = User.create(
+
+brad = User.create(
+  email: 'tony@gmail.com',
+  password: 'password',
+  password_confirmation: 'password',
+  username: 'Furry_kid_69',
+  firstname: 'Tony',
+  lastname: 'Xu',
+  location: 'Melbourne',
+  admin: false,
+  aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
+)
+brad.save
+puts 'just made a brad'
+puts 'email: brad@gmail.com'
+puts 'password: password'
+
+
+admin = User.create(
   email: 'admin@gmail.com',
   password: 'password',
   password_confirmation: 'password',
@@ -53,20 +73,10 @@ tony = User.create(
   admin: true,
   aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
 )
-tony.save
+admin.save
 puts 'just made a admin'
-puts ''
+puts 'email: admin@gmail.com'
+puts 'password: password'
 
-brad = User.create(
-  email: 'brad@hotsexyman.com',
-  password: 'brad12345',
-  password_confirmation: 'brad12345',
-  username: 'brad',
-  firstname: 'sdsd',
-  lastname: 'Zdsdsoo',
-  location: 'Sydney',
-  admin: true,
-  aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
-)
-brad.save
-puts 'just made a brad'
+
+post = 
