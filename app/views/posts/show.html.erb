@@ -9,6 +9,7 @@
         <div class="card-body">
           <h5 class="card-title"><%=@post.user.username%></h5>
           <p class="card-text">Author: <%=@post.user.firstname%> | <%=@post.user.lastname%> </p>
+          <p class="card-text">email: <%=@post.user.email%> </p>
         </div>
     </div>
 
@@ -26,6 +27,18 @@
     <%= link_to "delete", post_path(@post.id), method: :delete, class: "btn btn-danger"  %>
     <% end %>
 
+<div>
+<hr>
+<%= form_tag '/path' do%>
+Email :<%= text_field_tag 'email', ''%>
+<br>
+<br>
+Body:<%= text_area_tag 'body', ''%>
+<br>
+<%= submit_tag "submit",:value => "submit"%>
+<%end%>
+
+</div>
   </div>
   <%= render 'layouts/shared/stripe_form' %>
 </div>
