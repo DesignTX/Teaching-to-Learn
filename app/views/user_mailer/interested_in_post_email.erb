@@ -4,14 +4,18 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to example.com, <%= @user.firstname %></h1>
-    <p>
-      You have successfully signed up to example.com,
-      your username is: <%= @user.username %>.<br>
-    </p>
+  <h1>Good News!</h1>
+
+
+  <hr>
+
+  <h2>Here are their details if you choose to hook up with them to teach to learn!</h2>
+  <p>name: <%= @user.firstname %> <%= @user.lastname %></p>
+  <p>email: <%= @user.email %> </p>
+<%= raise%>
     <p>
       To login to the site, just follow this link: <%= @url %>.
     </p>
-    <p>Thanks for joining and have a great day!</p>
+    <p>Have a great day!</p>
   </body>
 </html>

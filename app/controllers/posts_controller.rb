@@ -58,10 +58,9 @@ class PostsController < ApplicationController
   end
 
   def send_email
-    # raise
-    @user = User.find(@post.user_id)
-
-    UserMailer.with(user: @user).interested_in_post_email.deliver_now
+    @postuser = User.find(@post.user_id)
+    @user = current_user
+    UserMailer.with(user: @postuser).interested_in_post_email.deliver_now
     redirect_to root_path
     # redirect to a prompt that tells the user they have been successful sending an email and the poster will be in contact with them soon
   end
