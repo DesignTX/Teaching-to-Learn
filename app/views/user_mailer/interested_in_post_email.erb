@@ -5,14 +5,14 @@
   </head>
   <body>
   <h1>Good News!</h1>
-
-
+ <p>someone is interested in your lesson <%= @post.title %>  </p>
   <hr>
 
   <h2>Here are their details if you choose to hook up with them to teach to learn!</h2>
-  <p>name: <%= @user.firstname %> <%= @user.lastname %></p>
-  <p>email: <%= @user.email %> </p>
- <%= raise %>
+  <p>email:  <%= @person_sending.email %>  </p>
+  <p>name:  <%= @person_sending.firstname %>  <%= @person_sending.lastname %>  </p>
+
+ 
     <p>
       To login to the site, just follow this link: <%= @url %>.
     </p>
