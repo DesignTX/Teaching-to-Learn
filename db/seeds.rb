@@ -104,9 +104,9 @@ verified = User.create(
   email: 'theadeptfridge@gmail.com',
   password: 'password',
   password_confirmation: 'password',
-  username: 'Admin',
-  firstname: 'Admin',
-  lastname: 'Neckbeard',
+  username: 'Best_Teacher_76',
+  firstname: 'Bradley',
+  lastname: 'Richardson',
   location: 'Melbourne',
   admin: true,
   aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'
