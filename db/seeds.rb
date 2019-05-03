@@ -134,7 +134,9 @@ post_1 = Post.create(
   Docker is a platform for creating and running containers from images.
   Still lost? No worries, that's because you probably don't know what containers or images are.
   
-  Images are single files containing all the dependencies and configurations required to run a program, while containers are the instances of those images. Let's go ahead and see an example of that in practice to make things clearer."
+  Images are single files containing all the dependencies and configurations required to run a program, while containers are the instances of those images. Let's go ahead and see an example of that in practice to make things clearer.",
+  latitude: "51.500792", 
+  longitude: "-0.124613"
 )
 post_1.save
 
@@ -156,7 +158,9 @@ post_2 = Post.create(
   Variables
   You can think about a variable as a word that stores a value. Simple as that.
 
-  In Ruby it’s easy to define a variable and set a value to it. Imagine you want to store the number 1 in a variable called one. Let’s do it!"
+  In Ruby it’s easy to define a variable and set a value to it. Imagine you want to store the number 1 in a variable called one. Let’s do it!",
+    latitude: "51.500792", 
+    longitude: "-0.124613"
 )
 post_2.save
 
@@ -182,7 +186,9 @@ post_3 = Post.create(
   The main process is used to display GUI elements. It does this by creating web pages.
   
   Each web page created runs in a process called the renderer process.
-  "
+  ",
+  latitude: "51.500792", 
+  longitude: "-0.124613"
 )
 post_3.save
 
@@ -203,6 +209,8 @@ post_4 = Post.create(
   
   13 interactive screencasts to take you from beginner to advanced.
   medium.freecodecamp.org	
-  Now let’s jump into it!"
+  Now let’s jump into it!",
+  latitude: "51.500792", 
+  longitude: "-0.124613"
 )
 post_4.save
