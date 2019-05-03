@@ -1,3 +1,11 @@
+<% provide :head_tags do %>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        initMap(<%=@post.latitude%>, <%=@post.longitude%>)
+    });
+    </script>
+<% end %>
+
 <br>
 <br>
 <br>
@@ -34,6 +42,11 @@
 
 <%= link_to "email", email_path(@post), class: "btn btn-success"  %>
 
+<div class="container">
+  <p>
+    <div id="map"></div>
+  </p>
+</div>
 </div>
   </div>
   <%= render 'layouts/shared/stripe_form' %>
