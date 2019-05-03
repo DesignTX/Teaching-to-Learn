@@ -3,7 +3,7 @@
 class PostsController < ApplicationController
   load_and_authorize_resource
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
     if params[:category]
       category = params[:category]
       @posts = @posts.select do |post|
@@ -14,6 +14,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    flash[:notice] = "Thanks for making a lesson!"
   end
 
   def filter; end
@@ -60,7 +61,13 @@ class PostsController < ApplicationController
   def send_email
     @postuser = User.find(@post.user_id)
     @user = current_user
-    UserMailer.with(user: @postuser).interested_in_post_email.deliver_now
+    @testuser = User.find(current_user.id)
+    @testing = {
+      email: @postuser.email,
+      firstname: @user.firstname,
+      title: @postuser.title
+    }
+    UserMailer.with(testing: @testing).interested_in_post_email.deliver_now
     redirect_to root_path
     # redirect to a prompt that tells the user they have been successful sending an email and the poster will be in contact with them soon
   end
