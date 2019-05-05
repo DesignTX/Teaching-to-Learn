@@ -213,4 +213,4 @@ post_4 = Post.create(
   latitude: "51.500792", 
   longitude: "-0.124613"
 )
-post_4.save
+post_4.saveAdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
