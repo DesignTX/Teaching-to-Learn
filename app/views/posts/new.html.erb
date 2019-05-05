@@ -16,6 +16,7 @@
       <%= select_tag "category", options_for_select(Category.all.collect{ |u| [u.name] }) %>
       <%= f.file_field :image %>
       <%= f.submit 'Create', class: 'btn btn-primary' %>
+      <% end %>
     <% else %>
       <h1 class="edit-form">Please sign in </h1>
     <% end %>

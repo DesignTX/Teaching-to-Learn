@@ -1,5 +1,5 @@
-  <% if user_signed_in? %>
 <div class="container">
+  <% if user_signed_in? %>
   <nav class="navbar navbar-light bg-light">
     <form class="form-inline">
       <%= link_to "ruby", posts_path(category: "ruby"), class: "btn btn-outline-success" %>
@@ -20,7 +20,6 @@
         <%= link_to 'Show', post, class: "btn btn-primary" %>
     </div>
     </div>
-  </div>
   <%end%>
 
 
@@ -45,7 +44,7 @@
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
   <% end %>
-
+</div>
 
 
 
