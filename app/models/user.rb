@@ -7,4 +7,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :trackable
   has_one_attached :avatar
   has_many :posts
+  has_many :comments
 end

@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/mdeering/gravatar_image_tag.git
+  revision: c02351f7d6649e2346394e33164a7154e671ec19
+  specs:
+    gravatar_image_tag (1.2.0)
+
+GIT
   remote: https://github.com/twbs/bootstrap-rubygem
   revision: 05041b5103debd53dac3ae203b796d13b7a44ce0
   specs:
@@ -279,6 +285,7 @@ DEPENDENCIES
   dotenv-rails
   faker
   font-awesome-rails
+  gravatar_image_tag!
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

@@ -3,7 +3,7 @@
 class PostsController < ApplicationController
   load_and_authorize_resource
   def index
-    @posts = Post.all.order("created_at DESC")
+    @posts = Post.all.order('created_at DESC')
     if params[:category]
       category = params[:category]
       @posts = @posts.select do |post|
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    flash[:notice] = "Thanks for making a lesson!"
+    flash[:notice] = 'Thanks for making a lesson!'
   end
 
   def filter; end
@@ -30,7 +30,6 @@ class PostsController < ApplicationController
       raise
       render 'new'
       end
-      
   end
 
   def show

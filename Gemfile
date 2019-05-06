@@ -9,6 +9,7 @@ gem 'cancancan'
 gem 'devise'
 gem 'faker'
 gem 'font-awesome-rails'
+gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 
 # Bootstrap dependecies
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
