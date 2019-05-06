@@ -19,14 +19,22 @@
       <%= f.label :category %>
       <%= select_tag "category", options_for_select(Category.all.collect{ |u| [u.name] }) %>
 <hr>
-      <%= f.file_field :image, class: "btn btn-default" %>
+      <label class="btn btn-outline-secondary">
+    Upload image
+    <span style="display:none;">
+      <%= f.file_field :image, class: "btn btn-outline-secondary" %>
+    </span>
+  
+  </label>
+<hr>
+    <%= f.file_field :image %>
 <hr>
 
 
       <%= f.submit 'Update', class: 'btn btn-outline-success' %>
       <% end %>
 <br>
-<%= link_to "Back", :back, class: "btn btn-outline-secondary" %>
+<%= link_to "Back", root_path, class: "btn btn-outline-secondary" %>
 
     </div>
   </div>
