@@ -121,7 +121,7 @@ puts '--------------------------'
 post_1 = Post.create(
   user_id: '1',
   category_id: '1',
-  title: 'Docker 101: Fundamentals and Practice',
+  title: 'Docker 101: Fundamentals and with Ruby',
   summary: "If you're tired of hearing your coworkers praise Docker and its benefits at every chance they get, or you're tired of nodding your head and walking away every time you find yourself in one of these conversations, you've come to the right place.",
   content: "Docker
   Here's Docker's definition, according to Wikipedia:
@@ -137,6 +137,26 @@ post_1 = Post.create(
   longitude: '-0.124613'
 )
 post_1.save
+
+post_10 = Post.create(
+  user_id: '1',
+  category_id: '1',
+  title: 'Ruby way 111011',
+  summary: "If you're tired of hearing your coworkers praise Docker and its benefits at every chance they get, or you're tired of nodding your head and walking away every time you find yourself in one of these conversations, you've come to the right place.",
+  content: "Docker
+  Here's Docker's definition, according to Wikipedia:
+
+  Docker is a computer program that performs operating-system-level virtualization.
+  Pretty simple, right? Well, not exactly. Alright, here's my definition of what docker is:
+
+  Docker is a platform for creating and running containers from images.
+  Still lost? No worries, that's because you probably don't know what containers or images are.
+
+  Images are single files containing all the dependencies and configurations required to run a program, while containers are the instances of those images. Let's go ahead and see an example of that in practice to make things clearer.",
+  latitude: '51.500792',
+  longitude: '-0.124613'
+)
+post_10.save
 
 post_2 = Post.create(
   user_id: '2',
@@ -211,3 +231,113 @@ post_4 = Post.create(
   longitude: '-0.124613'
 )
 post_4.save
+
+post_5 = Post.create(
+  user_id: '2',
+  category_id: '5',
+  title: 'Learn Python for Data Science',
+  summary: 'The module has also gotten native support by the major browsers Safari, Chrome, Firefox, Edge this year, so I believe that all front-end developer will have to learn this technology in the not too distant future.',
+  content: "
+  In this article, I’ll take you through the very basics of CSS Grid as quickly as possible. I’ll be leaving out everything you shouldn’t care about until you’ve understood the basics.
+
+  I’ve also created a free CSS Grid course. Click here to get full access to it.
+
+  Alternatively, check out this article, which explains what you’ll learn throughout the course:
+
+  Want to learn CSS Grid? Here’s my free full-length course. Merry Christmas!
+
+  13 interactive screencasts to take you from beginner to advanced.
+  medium.freecodecamp.org
+  Now let’s jump into it!",
+  latitude: '51.500792',
+  longitude: '-0.125613'
+)
+post_5.save
+
+post_6 = Post.create(
+  user_id: '2',
+  category_id: '5',
+  title: 'Learn Python 5 minutes a day',
+  summary: 'The module has also gotten native support by the major browsers Safari, Chrome, Firefox, Edge this year, so I believe that all front-end developer will have to learn this technology in the not too distant future.',
+  content: "
+  In this article, I’ll take you through the very basics of CSS Grid as quickly as possible. I’ll be leaving out everything you shouldn’t care about until you’ve understood the basics.
+
+  I’ve also created a free CSS Grid course. Click here to get full access to it.
+
+  Alternatively, check out this article, which explains what you’ll learn throughout the course:
+
+  Want to learn CSS Grid? Here’s my free full-length course. Merry Christmas!
+
+  13 interactive screencasts to take you from beginner to advanced.
+  medium.freecodecamp.org
+  Now let’s jump into it!",
+  latitude: '51.500792',
+  longitude: '-0.125613'
+)
+post_6.save
+
+post_7 = Post.create(
+  user_id: '2',
+  category_id: '6',
+  title: 'Learn JavaScript 5 minutes a day',
+  summary: 'The module has also gotten native support by the major browsers Safari, Chrome, Firefox, Edge this year, so I believe that all front-end developer will have to learn this technology in the not too distant future.',
+  content: "
+  In this article, I’ll take you through the very basics of CSS Grid as quickly as possible. I’ll be leaving out everything you shouldn’t care about until you’ve understood the basics.
+
+  I’ve also created a free CSS Grid course. Click here to get full access to it.
+
+  Alternatively, check out this article, which explains what you’ll learn throughout the course:
+
+  Want to learn CSS Grid? Here’s my free full-length course. Merry Christmas!
+
+  13 interactive screencasts to take you from beginner to advanced.
+  medium.freecodecamp.org
+  Now let’s jump into it!",
+  latitude: '51.500792',
+  longitude: '-0.125713'
+)
+post_7.save
+
+post_8 = Post.create(
+  user_id: '2',
+  category_id: '6',
+  title: 'JavaScript basics',
+  summary: 'The module has also gotten native support by the major browsers Safari, Chrome, Firefox, Edge this year, so I believe that all front-end developer will have to learn this technology in the not too distant future.',
+  content: "
+  In this article, I’ll take you through the very basics of CSS Grid as quickly as possible. I’ll be leaving out everything you shouldn’t care about until you’ve understood the basics.
+
+  I’ve also created a free CSS Grid course. Click here to get full access to it.
+
+  Alternatively, check out this article, which explains what you’ll learn throughout the course:
+
+  Want to learn CSS Grid? Here’s my free full-length course. Merry Christmas!
+
+  13 interactive screencasts to take you from beginner to advanced.
+  medium.freecodecamp.org
+  Now let’s jump into it!",
+  latitude: '51.500792',
+  longitude: '-0.125713'
+)
+post_8.save
+
+post_9 = Post.create(
+  user_id: '2',
+  category_id: '7',
+  title: 'Fotran for noobs',
+  summary: 'The module has also gotten native support by the major browsers Safari, Chrome, Firefox, Edge this year, so I believe that all front-end developer will have to learn this technology in the not too distant future.',
+  content: "
+  In this article, I’ll take you through the very basics of CSS Grid as quickly as possible. I’ll be leaving out everything you shouldn’t care about until you’ve understood the basics.
+
+  I’ve also created a free CSS Grid course. Click here to get full access to it.
+
+  Alternatively, check out this article, which explains what you’ll learn throughout the course:
+
+  Want to learn CSS Grid? Here’s my free full-length course. Merry Christmas!
+
+  13 interactive screencasts to take you from beginner to advanced.
+  medium.freecodecamp.org
+  Now let’s jump into it!",
+  latitude: '51.500792',
+  longitude: '-0.125713'
+)
+post_9.save
