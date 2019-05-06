@@ -21,6 +21,9 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    location = Geocoder.search(:address).first.coordinates
+    raise
+  
     category = Category.find_by(name: params[:category])
     @post.category = category
     @post.user_id = current_user.id
@@ -36,7 +39,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     @comments = @post.comments.all
-    @comment = @post.comments.build
+    # @comment = @post.comments.build
   end
 
   def update
@@ -71,6 +74,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content, :image)
+    params.require(:post).permit(:title, :content, :image, :address)
   end
 end

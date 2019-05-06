@@ -4,17 +4,22 @@
     <% if user_signed_in? %>
       <%= form_for @post, url: posts_path(@post) ,html: {class: "edit-form"}, :action => "create" do |f| %>
       <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.text_area :title, size: "50x2" %>
 
       <%= f.label :content, 'Content' %>
-      <%= f.text_field :content %>
+      <%= f.text_area :content, size: "50x10" %>
 
       <%= f.label :summary, 'Summary' %>
-      <%= f.text_field :summary %>
+      <%= f.text_area :summary, size: "50x5" %>
       
       <%= f.label :category %>
       <%= select_tag "category", options_for_select(Category.all.collect{ |u| [u.name] }) %>
+
+      <%= f.label :location %>
+      <%= f.text_area :address, size: "50x2" %>
+      <hr>
       <%= f.file_field :image %>
+      <hr>
       <%= f.submit 'Create', class: 'btn btn-primary' %>
       <% end %>
     <% else %>
