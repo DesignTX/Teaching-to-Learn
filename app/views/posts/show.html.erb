@@ -20,13 +20,16 @@
              <hr>
           <p class="card-text">Author: <%=@post.user.firstname%> | <%=@post.user.lastname%> </p>
           <p>posted: <%=@post.created_at%> </p>
+
         </div>
     </div>
 
     <hr class="my-4">
     <p><%=@post.content%></p>
-    <p>
-    <%= image_tag(@post.image.service_url) if @post.image.attached? %>
+    <div class="text-center">
+       <%= image_tag(@post.image.service_url) if @post.image.attached? %>
+    </div>
+   
 
     <% if can? :update, @post %>
     <%= link_to "edit", edit_post_path(@post.id), class: "btn btn-primary" %> |
