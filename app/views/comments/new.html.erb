@@ -1,0 +1,7 @@
+
+      <%= form_for @comment, url: comments_path(@comment) ,html: {class: "edit-form"}, :action => "create" do |f| %>
+        <%= f.label :comment %>
+        <%= f.text_area :comment, class: "text-area" %>
+        <%= f.hidden_field :post_id %>
+        <%= f.submit 'Create', class: 'btn btn-primary' %>
+      <% end %>
