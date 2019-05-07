@@ -133,8 +133,7 @@ post_1 = Post.create(
   Still lost? No worries, that's because you probably don't know what containers or images are.
 
   Images are single files containing all the dependencies and configurations required to run a program, while containers are the instances of those images. Let's go ahead and see an example of that in practice to make things clearer.",
-  latitude: '51.500792',
-  longitude: '-0.124613'
+  address: "Melbourne"
 )
 post_1.save
 
@@ -153,8 +152,7 @@ post_10 = Post.create(
   Still lost? No worries, that's because you probably don't know what containers or images are.
 
   Images are single files containing all the dependencies and configurations required to run a program, while containers are the instances of those images. Let's go ahead and see an example of that in practice to make things clearer.",
-  latitude: '51.500792',
-  longitude: '-0.124613'
+  address: "Melbourne"
 )
 post_10.save
 
@@ -177,8 +175,7 @@ post_2 = Post.create(
   You can think about a variable as a word that stores a value. Simple as that.
 
   In Ruby it’s easy to define a variable and set a value to it. Imagine you want to store the number 1 in a variable called one. Let’s do it!",
-  latitude: '51.500792',
-  longitude: '-0.124613'
+  address: "Melbourne"
 )
 post_2.save
 
@@ -205,8 +202,7 @@ post_3 = Post.create(
 
   Each web page created runs in a process called the renderer process.
   ",
-  latitude: '51.500792',
-  longitude: '-0.124613'
+  address: "Melbourne"
 )
 post_3.save
 
@@ -227,8 +223,7 @@ post_4 = Post.create(
   13 interactive screencasts to take you from beginner to advanced.
   medium.freecodecamp.org
   Now let’s jump into it!",
-  latitude: '51.500792',
-  longitude: '-0.124613'
+  address: "Melbourne"
 )
 post_4.save
 
@@ -249,8 +244,7 @@ post_5 = Post.create(
   13 interactive screencasts to take you from beginner to advanced.
   medium.freecodecamp.org
   Now let’s jump into it!",
-  latitude: '51.500792',
-  longitude: '-0.125613'
+  address: "Melbourne"
 )
 post_5.save
 
@@ -271,8 +265,7 @@ post_6 = Post.create(
   13 interactive screencasts to take you from beginner to advanced.
   medium.freecodecamp.org
   Now let’s jump into it!",
-  latitude: '51.500792',
-  longitude: '-0.125613'
+  address: "Melbourne"
 )
 post_6.save
 
@@ -293,8 +286,7 @@ post_7 = Post.create(
   13 interactive screencasts to take you from beginner to advanced.
   medium.freecodecamp.org
   Now let’s jump into it!",
-  latitude: '51.500792',
-  longitude: '-0.125713'
+  address: "Melbourne"
 )
 post_7.save
 
@@ -315,8 +307,7 @@ post_8 = Post.create(
   13 interactive screencasts to take you from beginner to advanced.
   medium.freecodecamp.org
   Now let’s jump into it!",
-  latitude: '51.500792',
-  longitude: '-0.125713'
+  address: "Melbourne"
 )
 post_8.save
 
@@ -337,7 +328,6 @@ post_9 = Post.create(
   13 interactive screencasts to take you from beginner to advanced.
   medium.freecodecamp.org
   Now let’s jump into it!",
-  latitude: '51.500792',
-  longitude: '-0.125713'
+  address: "Melbourne"
 )
 post_9.save
