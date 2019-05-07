@@ -21,8 +21,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    location = Geocoder.search(:address).first.coordinates
-    raise
+    results = Geocoder.search(post_params[:address])
+    location =  results.first.coordinates
   
     category = Category.find_by(name: params[:category])
     @post.category = category
