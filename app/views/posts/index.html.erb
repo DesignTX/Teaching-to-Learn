@@ -38,9 +38,23 @@
       <hr>
       <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
 
-      <%= link_to 'Log In', new_user_session_path, class: "btn btn-outline-secondary" %>
+      <%= link_to 'Sign In', new_user_session_path, class: "btn btn-outline-secondary" %>
     
       <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-outline-secondary" %>
+   <hr>
+
+  <p>
+   <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+  </p>
+  <p>
+    <%= link_to "Sign in with GitHub", user_github_omniauth_authorize_path %>
+  </p>
+  <p>
+    <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
+  </p>
+
+
+
     </div>
   </div>
   <% end %>

@@ -10,6 +10,14 @@ gem 'devise'
 gem 'faker'
 gem 'font-awesome-rails'
 gem 'geocoder'
+# Use Omniauth Facebook plugin
+gem 'omniauth-facebook'
+# Use Omniauth Github plugin
+gem 'omniauth-github'
+# Use Omniauth Google plugin
+gem 'omniauth-google-oauth2'
+# Use Omniauth Twitter plugin
+gem 'omniauth-twitter'
 
 # Bootstrap dependecies
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
