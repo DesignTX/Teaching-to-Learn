@@ -13,12 +13,13 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.user_id = current_user.id
+    post = @comment.post
     if @comment.save
       flash[:notice] = "comment created."
-      redirect_to '/posts'
+      redirect_to post_path(post)
     else
       flash[:error] = "Error creating comment."
-      redirect_to '/posts'
+      redirect_to '/posts/'
     end
   end
 

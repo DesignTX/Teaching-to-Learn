@@ -58,20 +58,13 @@
   <br>
   <br>
 
-        
-      <%= form_for @comment, url: comments_path ,html: {class: "edit-form"}, :action => "create" do |f| %>
-         <%= f.label :comment %>
-        <%= f.text_area :comment, class: "text-area" %>
-        <%= f.hidden_field(:post_id, :value => @post.id )%>
-        <%= f.submit 'Create', class: 'btn btn-primary' %>
-      <% end %>
-        
-        <%= link_to("Add Comment", new_comment_path(post_id: @post.id)) %>
-
-
-<hr>
-<h1></h1>
-<h2>comments</h2>
+<div class="card text-center">
+    <div class="card-header">
+      <h2>Comments</h2>
+    </div>
+    <div class="card-body"
+    >
+      <article>
     <h3><% @comments.each do |comments| %> </h3> 
         <div id="single-comment">
         <h6><%= comments.comment %></h6>
@@ -84,10 +77,42 @@
           <% end %>
         <% end %>
         </div>
-</div>
+      </article>
+            <%= form_for @comment, url: comments_path ,html: {class: "edit-form"}, :action => "create" do |f| %>
+         <%= f.label :comment %>
+        <%= f.text_area :comment, class: "text-area" %>
+        <%= f.hidden_field(:post_id, :value => @post.id )%>
+        <%= f.submit 'Create', class: 'btn btn-primary' %>
+      <% end %>
+        
+      <article>
+      </article>
+    </div>
+
+  </div>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+<hr>
 
 
 
