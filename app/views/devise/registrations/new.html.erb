@@ -46,15 +46,16 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"newlabel" %>
     </div>
 
-    <div class="field">
+    <div class="imagefield">
       <%= f.label :image_upload %><br />
-      <%= f.file_field :avatar %>
+      <%= f.file_field :avatar, class:"newavatar" %>
     </div>
-    <%= render "devise/shared/links" %>
-    <hr>
+    <br>    
     <div class="actions">
-      <%= f.submit "Sign up", class: "btn btn-outline-secondary" %>
+      <%= f.submit "Sign up", class: "testtest" %>
     </div>
+    <hr>
+    <%= render "devise/shared/links" %>
   </div>
   <% end %>
 
