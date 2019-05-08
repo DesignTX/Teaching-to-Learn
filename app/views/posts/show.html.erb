@@ -18,6 +18,7 @@
         <div class="card-body">
           <h5 class="card-title"><%=@post.user.username%></h5>
              <hr>
+             <%= image_tag(@post.user.avatar.service_url) if @post.user.avatar.attached? %>
           <p class="card-text">Author: <%=@post.user.firstname%> | <%=@post.user.lastname%> </p>
           <p>posted: <%=@post.created_at%> </p>
 

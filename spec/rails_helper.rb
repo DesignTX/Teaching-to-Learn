@@ -5,23 +5,10 @@ require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
-require 'capybara/poltergeist'
-require 'factory_girl_rails' #With require methods we load files from the new added gems, so we could use their methods below.
-require 'capybara/rspec'
-
-config.include Devise::Test::IntegrationHelpers, type: :feature #This configuration allows us to use devise methods inside capybara tests. It was provided inside the Devise docs.
-config.include FactoryGirl::Syntax::Methods #This configuration allows to use factory_girl gem’s methods.
-Capybara.javascript_driver = :poltergeist
-Capybara.server = :puma 
-
-
-
-
-
-
-
 # Add additional requires below this line. Rails is not loaded until this point!
-
+require 'capybara/poltergeist'
+require 'factory_girl_rails' 
+require 'capybara/rspec'
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -46,6 +33,10 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
+  config.include Devise::Test::IntegrationHelpers, type: :feature 
+  config.include FactoryGirl::Syntax::Methods 
+  Capybara.javascript_driver = :poltergeist
+  Capybara.server = :puma 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
