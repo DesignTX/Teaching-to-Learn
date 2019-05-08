@@ -33,13 +33,13 @@
 
   <% else %>
 
-  <div class="postbody">
-    <div class="postwrapper">
-      <div class="postnav">
-        <div class="postlogo">
+  <div class="landingbody">
+    <div class="landingwrapper">
+      <div class="landingnav">
+        <div class="landinglogo">
         LOGO
         </div>
-        <div class="postmenu">
+        <div class="landingmenu">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Random</a></li>
@@ -49,17 +49,15 @@
           </ul>
         </div>
       </div>
-      <div class="postheader">
+      <div class="landingheader">
       <h1>Hello World</h1>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-      <button type="button"><%= link_to 'Log In', new_user_session_path %></button>
-      <button type="button"><%= link_to 'Register', new_user_registration_path%></button>
+      <%= link_to 'Log In', new_user_session_path, class: "landingpagebutton" %>
+      <%= link_to 'Register', new_user_registration_path, class: "landingpagebutton"%>
       </div>
     </div>
   </div>  
   <% end %>
-
-  
 
 
 

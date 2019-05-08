@@ -1,20 +1,14 @@
-
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#map {
-  width: 600px;
-  height: 400px;
-}
-
-html .postbody {
+html .landingbody {
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
-.postbody {
+.landingbody {
   width: 100%;
   height: 100vh;
   background: black;
@@ -25,7 +19,7 @@ html .postbody {
   font-family: "Lato", sans-serif;
 }
 
-.postnav {
+.landingnav {
   position: fixed;
   top: 0;
   left: 0;
@@ -36,7 +30,7 @@ html .postbody {
   border-bottom: 1px solid whitesmoke;
 }
 
-.postlogo {
+.landinglogo {
   letter-spacing: 1px;
   float: left;
   color: whitesmoke;
@@ -45,20 +39,21 @@ html .postbody {
   padding: 0 3em; 
 }
 
-.postmenu {
+.landingmenu {
   float: right;
   line-height: 80px;
   margin: 0 3em;
 }
 
-.postmenu ul {
+.landingmenu ul {
   list-style: none;
 }
-.postmenu ul li {
+
+.landingmenu ul li {
 display: inline-block;
 }
 
-.postmenu ul li a {
+.landingmenu ul li a {
   text-decoration: none;
   color: whitesmoke;
   font-size: 16px;
@@ -73,7 +68,7 @@ ul li:nth-child(5) a {
   border-radius: 4px;
 }
 
-.postheader {
+.landingheader {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -81,18 +76,18 @@ ul li:nth-child(5) a {
   text-align: center;
 }
 
-.postheader h1 {
+.landingheader h1 {
   color: whitesmoke;
   font-size: 50px;
   margin-bottom: 8px;
 }
-.postheader p {
+.landingheader p {
   color: whitesmoke;
   font-size: 20px;
   font-weight: lighter;
 }
 
-.postheader button {
+.landingheader .landingpagebutton {
   color: whitesmoke;
   background: black;
   border: 1px solid whitesmoke;
