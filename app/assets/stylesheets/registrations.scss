@@ -50,6 +50,55 @@ padding: 8px 30px;
 border: none;
 }
 
+.socials {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 70%;
+}
+.social1 {
+  color: white;
+  padding: 10px;
+  background: #3b5998;
+}
+.social2 {
+  color: white;
+  padding: 10px;
+  background: #333;
+}
+.social3 {
+  color: white;
+  padding: 10px;
+  background: #DB4437;
+}
+.social3 :hover {
+  color: #DB4437;
+  background: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+
+.omniauthbutton0 {
+  font-family: "Lato", sans-serif;
+  color: white;
+  padding: 10px;
+  background: #3b5998;
+}
+.omniauthbutton1 {
+  font-family: "Lato", sans-serif;
+  padding: 10px;
+  color: white;
+  background: #333;
+}
+.omniauthbutton2 {
+  font-family: "Lato", sans-serif;
+  padding: 10px;
+  color: white;
+  background: #DB4437;
+}
 
 hr {
   width: 100%;
