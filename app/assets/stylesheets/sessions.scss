@@ -1,0 +1,75 @@
+.loginbody {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+}
+.loginbg {
+  background: url(https://i.imgur.com/ETQV8Wa.jpg);
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(3px);
+  overflow: hidden;
+}
+.logintitle {
+  text-align: center;
+  padding: 50px 0 20px;
+}
+.logintitle h1 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 36px;
+}
+.logincontainer {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+.logincontainer .loginleft {
+  float: left;
+  background: url(https://i.imgur.com/AClcxt7.jpg);  
+  width: 48%;
+  height: 400px;
+  overflow: hidden;
+  background-size: cover;
+  box-sizing: border-box;
+}
+.loginhr {
+  transform: rotate(90deg);
+  position: absolute;
+  width: 400px;
+  top: 47%;
+  left: 33%;
+  overflow: hidden;
+  background-color: white;
+  color: white;
+}
+.logincontainer .loginright {
+  float: right;
+  width: 48%;
+  height: 400px;
+  box-sizing: border-box;
+}
+
+.socialslogin {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 70%;
+}
