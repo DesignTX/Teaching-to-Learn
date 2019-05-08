@@ -2,7 +2,7 @@
 
 class Post < ApplicationRecord
   # Validations
-  validates :title, :content, :summary, presence: true
+  validates_presence_of :title, :content, :summary
 
   # Associations 
   belongs_to :user
