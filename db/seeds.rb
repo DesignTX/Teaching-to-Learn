@@ -334,7 +334,9 @@ post_9 = Post.create(
   13 interactive screencasts to take you from beginner to advanced.
   medium.freecodecamp.org
   Now let’s jump into it!",
-  address: 'Melbourne'
+  address: "Melbourne",
+  latitude: "37.8136",
+  longitude: "144.9631"
 
 )
 post_9.save

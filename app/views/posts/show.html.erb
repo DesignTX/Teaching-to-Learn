@@ -5,7 +5,7 @@
       initMap(<%=@post.latitude%>, <%=@post.longitude%>)
     });
   </script>
-<% end %>
+<% end  %>
 
 <br>
 <br>
@@ -48,11 +48,10 @@
 </div>
 
 
-<div class="container">
-  <p>
-    <div id="map"></div>
-  </p>
-</div>
+
+<div id="map"></div>
+
+
 </div>
   </div>
   <%= render 'layouts/shared/stripe_form' %>
