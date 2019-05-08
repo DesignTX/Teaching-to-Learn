@@ -1,4 +1,4 @@
-<div class="container">
+
   <% if user_signed_in? %>
   <nav class="navbar navbar-light bg-light justify-content-center">
     <form class="form-inline">
@@ -32,33 +32,33 @@
 
 
   <% else %>
-  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-      <h1 class="display-4 font-weight-normal">Punny headline</h1>
-      <hr>
-      <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple’s marketing pages.</p>
-
-      <%= link_to 'Sign In', new_user_session_path, class: "btn btn-outline-secondary" %>
-    
-      <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-outline-secondary" %>
-   <hr>
-
-  <p>
-   <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
-  </p>
-  <p>
-    <%= link_to "Sign in with GitHub", user_github_omniauth_authorize_path %>
-  </p>
-  <p>
-    <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
-  </p>
-
-
-
+  <div class="postbody">
+    <div class="postwrapper">
+      <div class="postnav">
+        <div class="postlogo">
+        LOGO
+        </div>
+        <div class="postmenu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Random</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><%= link_to 'Log In', new_user_session_path %></li>
+            <li><%= link_to 'Register', new_user_registration_path%></li>
+          </ul>
+        </div>
+      </div>
+      <div class="postheader">
+      <h1>Hello World</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+      <button type="button"><%= link_to 'Log In', new_user_session_path %></button>
+      <button type="button"><%= link_to 'Register', new_user_registration_path%></button>
+      </div>
     </div>
-  </div>
+  </div>  
   <% end %>
-</div>
+
+  
 
 
 
