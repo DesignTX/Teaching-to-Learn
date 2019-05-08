@@ -1,39 +1,45 @@
 
+<div class="loginbody">
+  <div class="loginbg"></div>
+  <div class="logintitle"><h1>Login</h1></div>
+  <div class="logincontainer">
+    <div class="loginleft"></div>
+    <hr class="loginhr">
+    <div class="loginright">
+      <div class="loginform">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "loginform") do |f| %>
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
 
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-      
+          <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "current-password" %>
+          </div>
 
-<h2>Log in</h2>
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+          <% if devise_mapping.rememberable? %>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end %>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+          <div class="actions">
+            <%= f.submit "Log in", class: "btn btn-outline-secondary" %>
+          </div>
+        <% end %>
+        <br>
+        <br>
+        <div class="socialslogin">
+        <%= link_to "Sign in with Google+", user_google_oauth2_omniauth_authorize_path, class: "social3" %>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
+        <%= link_to "Sign in with GitHub", user_github_omniauth_authorize_path, class: "social2"%>
 
-  <div class="actions">
-    <%= f.submit "Log in", class: "btn btn-outline-secondary" %>
-  </div>
-<% end %>
-<hr>
-<%= render "devise/shared/links" %>
-
-  </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block">
+        <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: "social1" %>       
+        </div>
+        </div>
+      </div>
     </div>
 </div>
-
 
