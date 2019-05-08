@@ -20,6 +20,5 @@ class Post < ApplicationRecord
     location = results.first.coordinates  # grabbing the first set of lat long
     self.longitude = location[1]
     self.latitude = location[0] # setting for post
-    raise
   end
 end
