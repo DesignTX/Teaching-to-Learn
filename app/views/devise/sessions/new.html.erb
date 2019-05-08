@@ -1,11 +1,13 @@
 
 <div class="loginbody">
   <div class="loginbg"></div>
-  <div class="logintitle"><h1>Login</h1></div>
+  
   <div class="logincontainer">
+    
     <div class="loginleft"></div>
     <hr class="loginhr">
     <div class="loginright">
+      <div class="logintitle"><h1>Login</h1></div>
       <div class="loginform">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "loginform") do |f| %>
           <div class="field">
@@ -29,7 +31,6 @@
             <%= f.submit "Log in", class: "btn btn-outline-secondary" %>
           </div>
         <% end %>
-        <br>
         <br>
         <div class="socialslogin">
         <%= link_to "Sign in with Google+", user_google_oauth2_omniauth_authorize_path, class: "social3" %>
