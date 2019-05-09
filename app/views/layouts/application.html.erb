@@ -9,6 +9,16 @@
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.google_maps_api_key}" %>
     <%= yield(:head_tags) %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript">
+      $(window).on('scroll', function() {
+        if($(window).scrollTop()) {
+          $('nav').addClass('black');
+        }
+        else {
+          $('nav').removeClass('black');
+        }
+      })
+    </script>
   </head>
 
   <body>

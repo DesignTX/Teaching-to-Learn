@@ -1,5 +1,15 @@
   <% if user_signed_in? %>
   <nav class="navbar navbar-light bg-light justify-content-center">
+  <nav>
+      <div class="navlogo">LOGO</div>
+      <ul>
+        <li><%= link_to 'Log In', new_user_session_path%></li>
+        <li><%= link_to 'Log In', new_user_session_path%></li>
+        <li><%= link_to 'Log In', new_user_session_path%></li>
+        <li><%= link_to 'Log In', new_user_session_path%></li>
+        <li><%= link_to 'Log In', new_user_session_path, class: "active"%></li>
+      </ul>
+    </nav>
     <form class="form-inline">
       <%= link_to "ruby", posts_path(category: "ruby"), class: "btn btn-outline-success" %>
       <%= link_to "java", posts_path(category: "java"), class: "btn btn-outline-success" %>
@@ -11,19 +21,21 @@
     </form>
   </nav>
 
-    <% @posts.each do |post| %>
-    <br>
-    <br>
-    <div class="card">
-    <h5 class="card-header"><%= post.title %></h5>
-    <div class="card-body"><%= image_tag(post.user.avatar.service_url, size: "80x80") if post.user.avatar.attached? %>
-      <h5 class="card-title"><%= post.category.name %></h5>
-      <p class="card-text"><%= post.content %></p>
-        <%= link_to 'Show', post, class: "btn btn-primary" %>
-    </div>
-    </div>
-  <%end%>
 
+    <div class="container">
+      <% @posts.each do |post| %>
+      <br>
+      <br>
+      <div class="card">
+      <h5 class="card-header"><%= post.title %></h5>
+      <div class="card-body"><%= image_tag(post.user.avatar.service_url) if post.user.avatar.attached? %>
+        <h5 class="card-title"><%= post.category.name %></h5>
+        <p class="card-text"><%= post.content %></p>
+          <%= link_to 'Show', post, class: "btn btn-primary" %>
+      </div>
+      </div>
+      <%end%>
+    </div>
 
 
   <%= link_to 'Create', new_post_path, class: "btn btn-primary" %>
@@ -34,26 +46,21 @@
 
   <div class="landingbody">
     <div class="landingwrapper">
-      <div class="landingnav">
-        <div class="landinglogo">
-        LOGO
-        </div>
-        <div class="landingmenu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Random</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><%= link_to 'Log In', new_user_session_path %></li>
-            <li><%= link_to 'Register', new_user_registration_path%></li>
-          </ul>
-        </div>
-      </div>
-      <div class="landingheader">
-      <h1>Hello World</h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-      <%= link_to 'Log In', new_user_session_path, class: "landingpagebutton" %>
-      <%= link_to 'Register', new_user_registration_path, class: "landingpagebutton"%>
-      </div>
+      <nav>
+      <div class="navlogo">LOGO</div>
+      <ul>
+        <li><%= link_to 'Log In', new_user_session_path%></li>
+        <li><%= link_to 'Log In', new_user_session_path%></li>
+        <li><%= link_to 'Log In', new_user_session_path%></li>
+        <li><%= link_to 'Log In', new_user_session_path%></li>
+        <li><%= link_to 'Log In', new_user_session_path, class: "active"%></li>
+      </ul>
+    </nav>
+    <section class="landingsec"></section>
+    <section class="landingcontent">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </section>
     </div>
   </div>  
   <% end %>
