@@ -17,7 +17,7 @@
     <br>
     <div class="card">
     <h5 class="card-header"><%= post.title %></h5>
-    <div class="card-body"><%= image_tag(post.user.avatar.service_url) if post.user.avatar.attached? %>
+    <div class="card-body"><%= image_tag(post.user.avatar.service_url, size: "80x80") if post.user.avatar.attached? %>
       <h5 class="card-title"><%= post.category.name %></h5>
       <p class="card-text"><%= post.content %></p>
         <%= link_to 'Show', post, class: "btn btn-primary" %>

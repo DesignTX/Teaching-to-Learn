@@ -7,21 +7,26 @@
   </script>
 <% end  %>
 
-<br>
-<br>
-<br>
-<div class="container">
-  <div class="jumbotron">
-    <h1 class="display-4"><%=@post.title%></h1>
-  <br>
-    <div class="card w-75">
-        <div class="card-body">
-          <h5 class="card-title"><%=@post.user.username%></h5>
-             <hr>
-             <%= image_tag(@post.user.avatar.service_url) if @post.user.avatar.attached? %>
-          <p class="card-text">Author: <%=@post.user.firstname%> | <%=@post.user.lastname%> </p>
-          <p>posted: <%=@post.created_at%> </p>
 
+<div class="container-fluid post-show-container" style="background: black;">
+  <div class="jumbotron">
+    <h1 class="text-center"><%=@post.title%></h1>
+  <br>
+    <div class="card w-100">
+        <div class="card-body">
+          <div class="d-flex flex-row">
+            <div class="p-2">
+                <%= image_tag(@post.user.avatar.service_url , size: "150x150") if @post.user.avatar.attached? %>
+            </div>
+            <div class="p-2">
+              <h5 class="card-title">
+              <%=@post.user.username%>
+              </h5>
+                <hr>
+              <p class="card-text">Author: <%=@post.user.firstname%> | <%=@post.user.lastname%> </p>
+              <p>posted: <%=@post.created_at%> </p>
+            </div>
+          </div>
         </div>
     </div>
 
@@ -42,32 +47,47 @@
 
 <div>
 <hr>
-<div class="text-center">
+<div class="text-center p-5">
 <p>If you are interest in getting into contact with the person conduction this lesson send them an email</p>
 <%= link_to "email", email_path(@post), class: "btn btn-success"  %>
 </div>
 
-
-
-<div id="map"></div>
-
-
-</div>
-  </div>
-  <%= render 'layouts/shared/stripe_form' %>
-  <br>
-  <br>
-
-<div class="card text-center">
-    <div class="card-header">
-      <h2>Comments</h2>
+    <div class="d-flex justify-content-center">
+      <div id="map"></div>
     </div>
-    <div class="card-body"
-    >
+</div>
+</div>
+
+<div class="center-the-card">
+  <div class="card-to-center">
+    <%= render 'layouts/shared/stripe_form' %>
+  </div>
+</div>
+<br>
+
+  
+<div class="center-the-card">
+  <div class="card-to-center">
+    <div class="card w-100">
+      <div class="card-header text-center">
+        <h4>Comments</h4>
+      </div>
+     <div class="card-body">
       <article>
     <h3><% @comments.each do |comments| %> </h3> 
-        <div id="single-comment">
-        <h6><%= comments.comment %></h6>
+
+
+
+      <div class="card w-100">
+        <div class="card-body">
+          <div class="d-flex flex-row">
+            <div>
+              <p><%= comments.comment %> </p>
+              <hr>
+              <p><%= comments.user.username %></p>
+              <p>posted: <%=comments.created_at%> </p>
+          </div>
+        </div>
           <% if can? :update, @comment %>
           <%= link_to "edit", edit_comment_path(@post.id), class: "btn btn-primary" %> 
           <% end %>
@@ -75,44 +95,34 @@
           <% if can? :destroy, @comment %>
           <%= link_to "delete", comment_path(@post.id), method: :delete, class: "btn btn-danger"  %>
           <% end %>
-        <% end %>
+    </div>
+<% end %>
+
+
+
+
+
         </div>
       </article>
             <%= form_for @comment, url: comments_path ,html: {class: "edit-form"}, :action => "create" do |f| %>
-         <%= f.label :comment %>
-        <%= f.text_area :comment, class: "text-area" %>
-        <%= f.hidden_field(:post_id, :value => @post.id )%>
-        <%= f.submit 'Create', class: 'btn btn-primary' %>
-      <% end %>
+            <%= f.label :comment %>
+            <%= f.text_area :comment, class: "text-area" %>
+            <%= f.hidden_field(:post_id, :value => @post.id )%>
+            <%= f.submit 'Create', class: 'btn btn-primary' %>
+            <% end %>
         
       <article>
       </article>
     </div>
-
   </div>
+  </div>
+</div>
 
 
+<br>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-
-<hr>
+</div>
 
 
 
