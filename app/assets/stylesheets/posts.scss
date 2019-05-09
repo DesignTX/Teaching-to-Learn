@@ -70,8 +70,6 @@
 
 
 
-
-
 html .postbody {
   margin: 0;
   padding: 0;
@@ -168,4 +166,13 @@ display: inline-block;
 
 .postcontainer {
   width: 95%;
+}
+
+.form-inline {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-inline a {
+  margin: 5px;
 }
