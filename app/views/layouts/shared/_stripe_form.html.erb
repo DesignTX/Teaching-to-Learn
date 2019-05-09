@@ -24,7 +24,7 @@
       </article>
 
 
-   <button id='donateButton' class= "btn btn-primary">Donate</button>
+   <button id='donateButton' class= "btn btn-warning btn-lg">Donate</button>
     </div>
 
   </div>
@@ -45,8 +45,9 @@
 var handler = StripeCheckout.configure({
   key: '<%= Rails.configuration.stripe[:publishable_key] %>',
   locale: 'auto',
-  name: 'Sand Castles United',
-  description: 'One-time donation',
+  name: 'One-time donation ',
+  description: 'To the Author of this Listing',
+
   token: function(token) {
     $('input#stripeToken').val(token.id);
     $('form').submit();

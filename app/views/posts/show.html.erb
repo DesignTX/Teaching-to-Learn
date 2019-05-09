@@ -48,8 +48,8 @@
 <div>
 <hr>
 <div class="text-center p-5">
-<p>If you are interest in getting into contact with the person conduction this lesson send them an email</p>
-<%= link_to "email", email_path(@post), class: "btn btn-success"  %>
+<p>If you are interest in getting into contact with the person conduction this lesson send them an email <%= link_to "email", email_path(@post), class: "btn btn-success"  %></p>
+
 </div>
 
     <div class="d-flex justify-content-center">
@@ -106,7 +106,7 @@
           <br>
       </article>
         <%= f.hidden_field(:post_id, :value => @post.id )%>
-        <%= f.submit 'Create', class: 'btn btn-primary' %>
+        <%= f.submit 'Create', class: 'btn btn-warning btn-lg' %>
     </div>
   </div>
    <% end %>
