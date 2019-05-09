@@ -6,93 +6,178 @@ html .landingbody {
   margin: 0;
   padding: 0;
   width: 100%;
-}
-
-.landingbody {
-  width: 100%;
-  height: 100vh;
-  background: black;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: table;
   font-family: "Lato", sans-serif;
 }
-
-.landingnav {
+nav {
+  z-index: 100;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px 100px;
+  box-sizing: border-box;
+  transition: .3s;
+}
+nav.black {
+  z-index: 100;
+  background: rgba(0,0,0,0.8);
+  height: 100px;
+  padding: 10px 100px;
+}
+nav .navlogo {
+  padding: 22px 20px;
+  height: 80px;
+  float: left;
+  font-size: 24px;
+  transition: .3s;
+}
+
+nav.black .navlogo {
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 80px;
-  border-bottom: 1px solid whitesmoke;
+  display: flex;
 }
 
-.landinglogo {
-  letter-spacing: 1px;
-  float: left;
-  color: whitesmoke;
-  font-size: 20px;
-  line-height: 80px;
-  padding: 0 3em; 
-}
-
-.landingmenu {
-  float: right;
-  line-height: 80px;
-  margin: 0 3em;
-}
-
-.landingmenu ul {
+nav ul li {
   list-style: none;
 }
 
-.landingmenu ul li {
-display: inline-block;
-}
-
-.landingmenu ul li a {
+nav ul li a {
+  line-height: 80px;
+  color: black;
+  padding: 12px 30px;
   text-decoration: none;
-  color: whitesmoke;
-  font-size: 16px;
-  font-weight: lighter;
-  padding: 0 20px;
+  // text-transform: uppercase;
+  transition: .3s;
 }
 
-ul li:nth-child(5) a {
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
-  padding: 10px 20px;
-  border-radius: 4px;
+nav.black ul li a {
+  color: white;
 }
 
-.landingheader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+nav ul li a:focus {
+  outline: none;
 }
 
-.landingheader h1 {
-  color: whitesmoke;
-  font-size: 50px;
-  margin-bottom: 8px;
+nav ul li a.active {
+  background: dodgerblue;
+  color: white;
+  border-radius: 6px;
 }
-.landingheader p {
-  color: whitesmoke;
+section.landingsec {
+  width: 100%;
+  height: 100vh;
+  background: url(https://images.wallpaperscraft.com/image/girl_mountains_backpack_114178_5458x3705.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.landingcontent {
+  margin-top: 80px;
+}
+.landingcontent p {
+  width: 900px;
+  margin: 30px auto;
+  text-align: justify;
   font-size: 20px;
-  font-weight: lighter;
+  line-height: 30px;
 }
 
-.landingheader .landingpagebutton {
-  color: whitesmoke;
-  background: black;
-  border: 1px solid whitesmoke;
-  padding: 16px 32px;
-  border-radius: 4px;
-  font-size: 20px;
-  margin: 0 .5em;
-}
+
+
+
+// .landingbody {
+//   width: 100%;
+//   height: 100vh;
+//   background: black;
+//   background-position: center;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   display: table;
+//   font-family: "Lato", sans-serif;
+// }
+
+// .landingnav {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   margin: 0;
+//   padding: 0;
+//   width: 100%;
+//   height: 80px;
+//   border-bottom: 1px solid whitesmoke;
+// }
+
+// .landinglogo {
+//   letter-spacing: 1px;
+//   float: left;
+//   color: whitesmoke;
+//   font-size: 20px;
+//   line-height: 80px;
+//   padding: 0 3em; 
+// }
+
+// .landingmenu {
+//   float: right;
+//   line-height: 80px;
+//   margin: 0 3em;
+// }
+
+// .landingmenu ul {
+//   list-style: none;
+// }
+
+// .landingmenu ul li {
+// display: inline-block;
+// }
+
+// .landingmenu ul li a {
+//   text-decoration: none;
+//   color: whitesmoke;
+//   font-size: 16px;
+//   font-weight: lighter;
+//   padding: 0 20px;
+// }
+
+// ul li:nth-child(5) a {
+//   color: whitesmoke;
+//   border: 1px solid whitesmoke;
+//   padding: 10px 20px;
+//   border-radius: 4px;
+// }
+
+// .landingheader {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   text-align: center;
+// }
+
+// .landingheader h1 {
+//   color: whitesmoke;
+//   font-size: 50px;
+//   margin-bottom: 8px;
+// }
+// .landingheader p {
+//   color: whitesmoke;
+//   font-size: 20px;
+//   font-weight: lighter;
+// }
+
+// .landingheader .landingpagebutton {
+//   color: whitesmoke;
+//   background: black;
+//   border: 1px solid whitesmoke;
+//   padding: 16px 32px;
+//   border-radius: 4px;
+//   font-size: 20px;
+//   margin: 0 .5em;
+// }
