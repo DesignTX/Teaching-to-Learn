@@ -8,11 +8,11 @@
 <% end  %>
 
 
-<div class="container-fluid post-show-container" style="background: black;">
-  <div class="jumbotron">
-    <h1 class="text-center"><%=@post.title%></h1>
+<div class="container-fluid post-show-container" style="background: #fff7d3;">
+  <div class="jumbotron " style="background: white;">
+    <h1 class="text-center" style="background: $orange;"><%=@post.title%></h1>
   <br>
-    <div class="card w-100">
+    <div class="card w-100" style="background: #fff7d3;">
         <div class="card-body">
           <div class="d-flex flex-row">
             <div class="p-2">
@@ -73,56 +73,71 @@
         <h4>Comments</h4>
       </div>
      <div class="card-body">
-      <article>
     <h3><% @comments.each do |comments| %> </h3> 
 
 
-
-      <div class="card w-100">
         <div class="card-body">
           <div class="d-flex flex-row">
             <div>
               <p><%= comments.comment %> </p>
-              <hr>
-              <p><%= comments.user.username %></p>
+              <h5><%= comments.user.username %></h5>
               <p>posted: <%=comments.created_at%> </p>
           </div>
         </div>
-          <% if can? :update, @comment %>
-          <%= link_to "edit", edit_comment_path(@post.id), class: "btn btn-primary" %> 
+          <% if can? :update, @post %>
+          <%= link_to "edit", edit_comment_path(@post.user.id), class: "btn btn-primary" %> 
           <% end %>
 
-          <% if can? :destroy, @comment %>
-          <%= link_to "delete", comment_path(@post.id), method: :delete, class: "btn btn-danger"  %>
+          <% if can? :destroy, @post %>
+          <%= link_to "delete", comment_path(@post.user.id), method: :delete, class: "btn btn-danger"  %>
           <% end %>
-    </div>
-<% end %>
-
-
-
-
-
+          <hr>
         </div>
-      </article>
-            <%= form_for @comment, url: comments_path ,html: {class: "edit-form"}, :action => "create" do |f| %>
-            <%= f.label :comment %>
-            <%= f.text_area :comment, class: "text-area" %>
-            <%= f.hidden_field(:post_id, :value => @post.id )%>
-            <%= f.submit 'Create', class: 'btn btn-primary' %>
-            <% end %>
-        
+        <% end %>
+
+
+  <%= form_for @comment, url: comments_path ,html: {class: "edit-form"}, :action => "create" do |f| %>
+
+  <div class="card text-center w-100">
+    <div class="card-body">
       <article>
+          <h5 class="card-title"><%= f.label "Leave a comment" %></h5>
+          <p class="card-text"><%= f.text_area :comment, class: "text-area", size: "50x5"%></p>
+          <br>
       </article>
+        <%= f.hidden_field(:post_id, :value => @post.id )%>
+        <%= f.submit 'Create', class: 'btn btn-primary' %>
     </div>
   </div>
+   <% end %>
+       
+
+            
+           
+           
+     
+
+
+
+      </div>
+    </div>
   </div>
 </div>
+
+
+
+
+  
+
+
+    
+
+  </div>
 
 
 <br>
 
 
-</div>
 
 
 

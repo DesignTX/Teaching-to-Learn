@@ -3,19 +3,21 @@
 
     <% if user_signed_in? %>
       <%= form_for @post, url: posts_path(@post) ,html: {class: "edit-form"}, :action => "create" do |f| %>
-      <%= f.label :title %>
+      <h4><%= f.label :title %></h4>
       <%= f.text_area :title, size: "50x2" %>
 
-      <%= f.label :content, 'Content' %>
+      <h4><%= f.label :content, 'Content' %></h4>
       <%= f.text_area :content, size: "50x10" %>
 
-      <%= f.label :summary, 'Summary' %>
+      <h4><%= f.label :summary, 'Summary' %></h4>
       <%= f.text_area :summary, size: "50x5" %>
-      
-      <%= f.label :category %>
-      <%= select_tag "category", options_for_select(Category.all.collect{ |u| [u.name] }) %>
+      <br>
 
-      <%= f.label :location %>
+      <h4><%= f.label :category %></h4>
+      <%= select_tag "category", options_for_select(Category.all.collect{ |u| [u.name] }) %>
+      <br>
+
+      <h4><%= f.label :location %></h4>
       <%= f.text_area :address, size: "50x2" %>
       <hr>
       <%= f.file_field :image %>
