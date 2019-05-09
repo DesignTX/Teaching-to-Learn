@@ -70,6 +70,9 @@ class PostsController < ApplicationController
     redirect_to posts_path
     # redirect to a prompt that tells the user they have been successful sending an email and the poster will be in contact with them soon
   end
+  
+def landingpage
+end
 
   private
 

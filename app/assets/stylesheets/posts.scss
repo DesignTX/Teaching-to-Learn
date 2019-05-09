@@ -56,12 +56,29 @@
  
 
 
+.user-post-page{
+  display: flex;
+  margin-top: 110px;
+  min-height: 650px;
+}
+  .postleft{
+    width: 150px;
+    border: 1px solid #dbdbdb;  
+  }
+  .postright{
+    flex: 1;
+    border: 1px solid #dbdbdb;
+    border-left:none;
+  }
 
 
 
 
-
-
+.form-inline a {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10px;
+}
 
 
 
