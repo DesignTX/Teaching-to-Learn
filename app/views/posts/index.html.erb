@@ -1,7 +1,7 @@
   <% if user_signed_in? %>
     <div class="postlogin">
     <nav>
-      <div class="navlogo">LOGO</div>
+      <div class="navlogo"><img src="https://i.imgur.com/9KMbz0q.png" alt=""></div>
       <ul>
         <li> <%= link_to 'Posts', root_path%></li>
         <li><%= link_to 'Profile', edit_user_registration_path%></li>
@@ -13,7 +13,7 @@
 <div class="user-post-page">
   <div class="postleft">
   <br>
-      <form class="form-inline">
+      <form class="filter-nav">
       <%= link_to "Ruby", posts_path(category: "ruby"), class: "btn btn-outline-success" %>
       <%= link_to "Java", posts_path(category: "java"), class: "btn btn-outline-success" %>
       <%= link_to "HTML", posts_path(category: "HTML"), class: "btn btn-outline-success" %>
@@ -28,7 +28,7 @@
      <div class="container">
      <br>
 
-      <%= link_to 'Create', new_post_path, class: "btn btn-primary" %>
+      <%= link_to 'Create', new_post_path, class: "btn btn-primary create" %>
  
       <% @posts.each do |post| %>
       <br>
@@ -53,16 +53,12 @@
   <div class="landingbody">
     <div class="landingwrapper">
       <nav>
-      <div class="navlogo">LOGO</div>
-      <ul>
-        <li><%= link_to 'Log In', new_user_session_path%></li>
-        <li><%= link_to 'Log In', new_user_session_path%></li>
-        <li><%= link_to 'Log In', new_user_session_path%></li>
-        <li><%= link_to 'Log In', new_user_session_path%></li>
-        <li><%= link_to 'Log In', new_user_session_path, class: "active"%></li>
-      </ul>
+      <div class="navlogo"><img src="https://i.imgur.com/9KMbz0q.png" alt=""></div>
     </nav>
-    <section class="landingsec"></section>
+    <section class="landingsec">
+      <%= link_to 'Register', new_user_registration_path, class: "landingpagebutton2"%>    
+      <%= link_to 'Log In', new_user_session_path, class: "landingpagebutton1" %>
+    </section>
     <section class="landingcontent">
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>

@@ -172,12 +172,28 @@ section.landingsec {
 //   font-weight: lighter;
 // }
 
-// .landingheader .landingpagebutton {
-//   color: whitesmoke;
-//   background: black;
-//   border: 1px solid whitesmoke;
-//   padding: 16px 32px;
-//   border-radius: 4px;
-//   font-size: 20px;
-//   margin: 0 .5em;
-// }
+.landingpagebutton1 {
+  color: whitesmoke;
+  background: black;
+  border: 1px solid whitesmoke;
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-size: 20px;
+  margin: 0 .5em;
+  position: absolute;
+  top: 75%;
+  left: 38%;
+}
+
+.landingpagebutton2 {
+  color: whitesmoke;
+  background: black;
+  border: 1px solid whitesmoke;
+  padding: 16px 32px;
+  border-radius: 4px;
+  font-size: 20px;
+  margin: 0 .5em;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+}
