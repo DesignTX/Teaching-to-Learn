@@ -74,15 +74,6 @@
 
 
 
-.form-inline a {
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-
-
-
-
 
 
 
@@ -185,11 +176,25 @@ display: inline-block;
   width: 95%;
 }
 
-.form-inline {
-  justify-content: center;
-  flex-wrap: wrap;
+
+.filter-nav {
+  display: flex;
+  flex-direction: column;
 }
 
-.form-inline a {
+.filter-nav a {
   margin: 5px;
+}
+
+.btn.btn-primary.create {
+  
+}
+
+.navlogo {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+}
+.navlogo img {
+  width: 100px;
 }
