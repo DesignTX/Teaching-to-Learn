@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_many :comments
   devise :omniauthable, omniauth_providers: %i[facebook github google_oauth2]
 
+  # authenticates frkom suer crendtental and crteaitnfd the usser if doesnt exist and then if  createse it creates a new api
+  # i wrote this the traine friday night after you ditched us lol
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
