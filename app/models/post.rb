@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class Post < ApplicationRecord
-  # Validations
-
   # Associations 
   belongs_to :user
   belongs_to :category

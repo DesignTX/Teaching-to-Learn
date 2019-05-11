@@ -2,6 +2,7 @@
 
 class OmniauthController < ApplicationController
   # facebook callback
+  # code was sourced from the documentation
   def facebook
     @user = User.create_from_provider_data(request.env['omniauth.auth'])
     if @user.persisted?
@@ -14,6 +15,7 @@ class OmniauthController < ApplicationController
   end
 
   # github callback
+  # code was sourced from the documentation
   def github
     @user = User.create_from_github_data(request.env['omniauth.auth'])
     if @user.persisted?
@@ -26,6 +28,7 @@ class OmniauthController < ApplicationController
   end
 
   # google callback
+  # code was sourced from the documentation
   def google_oauth2
     @user = User.create_from_google_data(request.env['omniauth.auth'])
     if @user.persisted?

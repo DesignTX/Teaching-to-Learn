@@ -1,20 +1,21 @@
+
 <div class="user-edit-page">
   <div class="editleft">
   </div>
   
  <div class="editright">
-
   <%= form_for @post, url: post_path(@post) ,html: {class: "edit-form"}, :action => "update" do |f| %>
-      <%= f.label :title %>
+      <h4><%= f.label :title %></h4>
+      <%= f.text_area :title, size: "30x2", class: 'text-area text-center', placeholder: "write until your hearts" %>
       <br>
+
       
       <%= f.text_area :title, size: "30x2" %>
 <hr>
       <%= f.label :content, 'Content' %>
       <br>
-      <%= f.text_area :content, size: "50x10" %>
-<hr>
-      <%= f.label :summary, 'Summary' %>
+      <h4><%= f.label :content, 'Content' %></h4>
+      <%= f.text_area :content, size: "50x10", class: 'text-area text-center', placeholder: "write until your hearts" %>
       <br>
       <%= f.text_area :summary, size: "50x7" %>
       <br>
@@ -32,13 +33,12 @@
   
   </label>
     <%= f.file_field :image %>
-
-
-
       <%= f.submit 'Update', class: 'btn btn-outline-success' %>
       <% end %>
-<br>
-<%= link_to "Back", root_path, class: "btn btn-outline-secondary" %>
+      <br>
+      <%= link_to "Back", root_path, class: "btn btn-outline-secondary" %>
+      <br>
+      <br>
 
     </div>
   </div>
