@@ -32,7 +32,7 @@ tony = User.create(
   email: 'tony@gmail.com',
   password: 'password',
   password_confirmation: 'password',
-  username: 'Furry_kid_69',
+  username: 'Corgi',
   firstname: 'Tony',
   lastname: 'Xu',
   location: 'Melbourne',
@@ -47,12 +47,12 @@ puts ''
 puts '--------------------------'
 
 brad = User.create(
-  email: 'tony@gmail.com',
+  email: 'brad@gmail.com',
   password: 'password',
   password_confirmation: 'password',
-  username: 'Furry_kid_69',
-  firstname: 'Tony',
-  lastname: 'Xu',
+  username: 'Brad',
+  firstname: 'Brad',
+  lastname: 'Richardson',
   location: 'Melbourne',
   admin: false,
   aboutme: 'I have a cute little dog Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam repellendus assumenda unde odit debitis hic expedita iusto cumque ducimus possimus!'

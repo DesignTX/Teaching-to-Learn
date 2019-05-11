@@ -32,12 +32,12 @@ https://afternoon-eyrie-61635.herokuapp.com/
 - **[Application](#Application)**
     - **[Network Infrastructure](#Network-Infrastructure)**
     - **[Software](#Software)**
+    - **[Database](#Database)**
+    - **[PostgresSQL](#PostgresSQL)**
     - **[Architecture](#Architecture)**
-    - **[Components](#Components)**
-    - **[Third Party Services](#Third-Party-Services)**
 - **[Database](#Database)**
     - **[Database Justification](#Database-Justification)**
-    - **[Production Database](#Production-Database)**
+    - **[Third-Party-Services](#Third-Party-Services)**
     - **[Market Research](#Market-Research)**
     - **[Database Relations](#Database-Relations)**
     - **[Entity Relationship Diagram](#Entity-Relationship-Diagram)** 
@@ -48,18 +48,16 @@ https://afternoon-eyrie-61635.herokuapp.com/
     - **[Task Management](#Task-Management)**
     - **[Agile Methodologies](#Agile-Methodologies)**
     - **[Source Control](#Source-Control)**
-    - **[Deployment](#Deployment)**
-    - **[UX/UI](#UX-UI)**
+    - **[Testing](#Testing)**
 - **[Testing and Information Security](#Testing-and-Information-Security)**
     - **[Testing](#Testing)**
     - **[Information Security Requirements](#Information-Security-Requirements)**
     - **[Information Security Methodologies](#Information-Security-Methodologies)**
     - **[User Data Management](#User-Data-Management)**
-- **[Minimum Viable Product](#Minimum-Viable-Product)**
-    - **[Challenges](#Challenges)**
-    - **[Future Enhancements](#Future-Enhancements)**
-    - **[The Pitch](#The-Pitch)**
-- **[Conclusion](#Conclusion)**
+- **[Team Plan & Chat](#Team-Plan-Chat)**
+  - **[Trello](#Trello)**
+  - **[Slack](#Slack)**
+
 
 ## <a id="Concept"></a>Concept
 ### <a id="Challenge"></a>Challenge
@@ -122,19 +120,19 @@ Services
 * _Heroku_: Cloud hosting platform, enables deployment to production.
 * _Google Maps API_: Google maps, allows us to add an interactive map to the application.
 
-### <a id="Architecture"></a>Architecture
+### <a id="Database"></a>Database
 *Identify the database to be used in your App and provide a justification for your choice.*
 
 Postgres will be used in both development and production. As we will be deploying to heroku this made the most sense. In preparation for a hassle free deployment we made the decision to use Postgres in both development and production. PostgreSQL was also chosen due to being a relational database management system. One of the benefits of this database is that it conforms to the SQL standard, furthermore as these databases are more common there are more options and more documentation. A disadvantage of the RDMS can be seen as lack of direct interpretation from OOP languages. 
 
-### <a id="Components"></a>Components
+### <a id="PostgresSQL"></a>PostgresSQL
 *Identify and describe the production database setup (i.e. postgres instance).*
 
 The production database will be postgresSQL. We have also chosen to use this in development as well to allow smooth deployment to production. Querying the database is abstracted away due to the ActiveRecord class. Therefore we interact with the Active Record Query Interface using the ruby programming language.
 
 “PostgreSQL is an open-source relational database management system emphasizing extensibility and standards compliance” (wikipedia) 
 
-### <a id="Third-Party-Services"></a>Third Party Services
+### <a id="Architecture"></a>Architecture
 *Describe the architecture of your App.*
 
 Landing page, this greets the user and is what everyone sees when first visiting Teach-2-Learn.  When attempting to visit the landing page the browser calls the DNS resolver this asks for the IP of the URL. The browser then initiates a TCP/IP connection with the webserver. The webserver then serves the HTML via HTTP.
@@ -167,7 +165,7 @@ In hindsight upon looking at the controller we wrote. They are not the current w
 * _Devise_ - Devise is a GEM that is commonly used for authentication and managing user sessions. It abstracts ALOT away and can be seen as a more secure way as no mistake can be made. Devise abstracts away writing a lot of ruby methods to cover things such as encryption and session management. 
 * _Rails_ - Abstracts away everything. Rails is a framework that has so many built in methods and functionality that allow for rapid software development. It not only abstracts away ruby methods, for example the link_to helper is an abstraction from HTML. It allows the developer to focus on more specific features of applications and abstracts away the scaffolding. 
 
-#### <a id="Production-Database"></a>Production Database
+#### <a id="Third-Party-Services"></a>Third Party Services
 *Detail any third party services that your App will use.*
 
 * _AWS_: Amazon Web Services S3 provides hosting for images, will be used to allow users to attach a profile image to their profile and also to attach an image to a post. 
@@ -226,7 +224,7 @@ has_many :comments, dependent :destroy
 
 #### <a id="Entity-Relationship-Diagram"></a>Entity Relationship Diagram
 *Provide your database schema design.*
-![wireframes](https://i.imgur.com/hi9FJuE.png)
+![ERD](https://i.imgur.com/hi9FJuE.png)
 
 ## <a id="Project-Management"></a>Project Management
 ### <a id="Inspiration"></a>Inspiration
@@ -237,7 +235,9 @@ has_many :comments, dependent :destroy
 
 ### <a id="Wireframes"></a>Wireframes
 *Provide Wireframes for your App.*
+![wireframes](https://i.imgur.com/vPpHqOu.png)
 
+https://www.figma.com/file/R7Z2Te0rRMPtmtdVU5stIwVu/Teach2Learn?node-id=0%3A1
 
 ### <a id="Task-Management"></a>Task Management
 *Describe the way tasks are allocated and tracked in your project.*
@@ -261,7 +261,7 @@ The use of trello can be seen as an agile technique. Small tasks that are picked
 In this project we are collaborating using git and GitHub. Our source control progress is branching off from the master, working on a feature, pushing that branch up to be merged and then merging that branch. We chose to enable the team to merge their own branches. We figured if we be careful this allows us to work on features and not rely on the other team member in order to merge.
 Writing this now the project is said and done. Reflecting our source control process worked smoothly. We had no issues after the first few days.
 
-### <a id="Deployment"></a>Deployment
+### <a id="Testing"></a>Testing
 *Provide an overview and description of your Testing process.*
 
 Manual testing was practiced at regular intervals when deployed to heroku to ensure complete functionality. Many roadblocks were encountered when deploying to heroku but were resolved upon analysis of the heroku logs. Manual testing proved to be effective and not too time consuming in our project. 
@@ -297,35 +297,11 @@ As legal obligations in relation to handling user data vary across different cou
 * _Privacy Policy_: Disclosing the ways in which the a website gathers, uses, discloses and managers a visitor or customer's data and legal requirements to protect a user's privacy.
 * _Legal Notice and Terms_: Outlining the terms on which users may make use of the website and the legal use of copyrighted or proprietary assets and information.
 
+### <a id="Team-Plan-Chat"></a>Team Work
 
+### <a id="Trello"></a>Trello
+![Trello](https://i.imgur.com/KBZQtVY.jpg)
 
-<h2 align="center"> 
-Initial Planning
-</h2>
-<p align="center">
-  <img width="250" height="250" src=docs/image.png>
-</p>
-
-<p align="center">
-  <img width="250" height="250" src=docs/image.png>
-</p>
-
-
-<h2 align="center"> 
-Slack Communications
-</h2>
-<p align="center">
-  <img width="250" height="250" src=docs/image.png>
-</p>
-
-
-<h2 align="center"> 
-Trello Use
-</h2>
-<p align="center">
-  <img width="250" height="250" src=docs/image.png>
-</p>
-
-<p align="center">
-  <img width="250" height="250" src=docs/image.png>
-</p>
+### <a id="Slack-Communication"></a>Slack Communication
+![Slackchat1](https://i.imgur.com/m1GAX8q.png)
+![Slackchat2](https://i.imgur.com/8TPckM1.png)
