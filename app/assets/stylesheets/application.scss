@@ -14,11 +14,15 @@
  *= require_self
  */
 
+//  importing bootstrap
  @import "bootstrap";
+// importing font-awesome
  @import "font-awesome";
+// importing font
  @import url('https://fonts.googleapis.com/css?family=Lato');
 
 
+//  setting variables to be used throughout the project
  $primary-blue: #4285F4;
  $primary-red: #EB4335;
  $primary-yellow: #FBBC06;
@@ -40,6 +44,7 @@
    }
  }
 
+//  a class to be used and applied to text-areas
  .text-area {
   background: #fff7d3;
  }
