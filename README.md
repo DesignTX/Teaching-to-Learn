@@ -1,7 +1,4 @@
-<p align="center">
-  <img width="1050" height="250" src=images/cube.png></p>
-  
-<h1 align="center"> 
+  <h1 align="center"> 
 Teaching to Learn
 </h1>
 
